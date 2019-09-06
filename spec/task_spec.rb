@@ -1,4 +1,5 @@
 require "task"
+require "sequel"
 
 RSpec.describe Task do
     describe 'complete' do

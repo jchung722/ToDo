@@ -8,7 +8,7 @@ class TaskList
     end
 
     def get_task(id)
-        Task.where(id: id).first
+        Task[id]
     end
 
     def create(title, description)

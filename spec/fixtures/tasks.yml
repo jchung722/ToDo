@@ -1,0 +1,15 @@
+schema:
+  - name: title
+    type: string
+    primary_key: true
+  - name: description
+    type: string
+  - name: is_complete
+    type: boolean
+data:
+  - title: task1
+    description: description1
+    is_complete: false
+  - title: task2
+    description: description2
+    is_complete: false

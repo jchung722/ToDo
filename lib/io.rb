@@ -9,9 +9,13 @@ class IO
     end
 
     def self.print_task(task)
-        puts "Title: #{task.title}"
-        puts "Description: #{task.description}"
-        puts "Complete: #{task.is_complete}"
+        if task == nil
+            puts "This task does not exist."
+        else
+            puts "Title: #{task.title}"
+            puts "Description: #{task.description}"
+            puts "Complete: #{task.is_complete}"
+        end
     end
 
     def self.print_list(list)

@@ -1,6 +1,6 @@
 require_relative "task"
 
-class TaskList
+class TaskController
     attr_reader :list
 
     def get_task_list

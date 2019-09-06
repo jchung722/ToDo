@@ -1,4 +1,4 @@
-require "task_list"
+require "task_controller"
 require "sequel"
 
 RSpec.describe TaskList do

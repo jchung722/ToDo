@@ -3,7 +3,8 @@
 **A Command Line To Do List App**
 
 ## Setup/Installation
-
+Use the following command in the root directory to install gems:  
+```$ bundle install```
 
 ## Running Tests
 To run tests, from the root directory use the command:  

@@ -1,4 +1,3 @@
-require_relative "task"
 require_relative "task_list"
 require_relative "io"
 
@@ -39,6 +38,3 @@ class Main
         end
     end
 end
-
-main = Main.new(IO)
-main.start

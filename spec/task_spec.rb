@@ -2,13 +2,13 @@ require "task"
 require "sequel"
 
 RSpec.describe Task do
-    describe 'complete' do
-      it 'marks the task as complete' do
-        task = Task.new("test", "description")
+    # describe 'complete' do
+    #   it 'marks the task as complete' do
+    #     task = Task.new("test", "description")
 
-        task.complete
+    #     task.complete
 
-        expect(task.is_complete).to eq(true)
-      end
-    end
+    #     expect(task.is_complete).to eq(true)
+    #   end
+    # end
 end

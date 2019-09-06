@@ -3,23 +3,26 @@ require_relative "task"
 class TaskList
     attr_reader :list
 
-    def initialize
-        @list = []
+    def get_task_list
+        Task.all
     end
 
-    def get_task(index)
-        @list[index]
+    def get_task(id)
+        Task.where(id: id).first
     end
 
     def create(title, description)
-        @list << Task.new(title, description)
+        Task.create(title: title, 
+                    description: description, 
+                    is_complete: false)
     end
 
-    def complete(index)
-        @list[index].complete
+    def complete(id)
+        task = Task.where(id: id)
+        task.update(is_complete: true)
     end
 
-    def delete(index)
-        @list.delete_at(index)
+    def delete(id)
+        Task.where(id: id).delete
     end
 end

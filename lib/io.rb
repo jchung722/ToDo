@@ -1,7 +1,7 @@
 class IO
-    def self.get_task_index
+    def self.get_task_id
         print "Which task? "
-        gets.chomp.to_i - 1
+        gets.chomp.to_i
     end
 
     def self.get
@@ -21,7 +21,7 @@ class IO
             if task.is_complete
                 mark = "[X]"
             end
-            puts "#{mark}#{i}. #{task.title}"
+            puts "#{mark}#{task.id}. #{task.title}"
             i += 1
         end
     end

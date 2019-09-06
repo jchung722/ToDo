@@ -1,14 +1,5 @@
-class Task
-    attr_reader :title, :description, :is_complete
+require "sequel"
+require_relative "Database"
 
-    def initialize(title, description)
-        @title = title
-        @description = description
-        @is_complete = false
-    end
-
-    def complete
-        @is_complete = true
-    end
-    
+class Task < Sequel::Model(:tasks)
 end

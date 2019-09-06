@@ -13,7 +13,7 @@ class Main
 
         while true
             puts "Your List:"
-            @io.print_list(tasks.list)
+            @io.print_list(tasks.get_task_list)
             print "Select an Action (create, complete, show, delete, exit): "
 
             case @io.get
@@ -25,12 +25,12 @@ class Main
 
                     tasks.create(title, description)
                 when "complete"
-                    tasks.complete(@io.get_task_index)
+                    tasks.complete(@io.get_task_id)
                 when "show"
-                    task = tasks.get_task(@io.get_task_index)
+                    task = tasks.get_task(@io.get_task_id)
                     @io.print_task(task)
                 when "delete"
-                    tasks.delete(@io.get_task_index)
+                    tasks.delete(@io.get_task_id)
                 when "exit"
                     break
                 else

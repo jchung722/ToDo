@@ -1,4 +1,5 @@
 require_relative "task_controller"
+require_relative "task"
 require_relative "io"
 
 class Main
@@ -8,7 +9,7 @@ class Main
     end
 
     def start
-        tasks = TaskList.new
+        tasks = TaskController.new(Task)
 
         while true
             puts "Your List:"

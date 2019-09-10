@@ -1,28 +1,29 @@
-require_relative "task"
-
 class TaskController
-    attr_reader :list
+
+    def initialize(task)
+        @task = task
+    end
 
     def get_task_list
-        Task.all
+        @task.all
     end
 
     def get_task(id)
-        Task[id]
+        @task[id]
     end
 
     def create(title, description)
-        Task.create(title: title, 
+        @task.create(title: title, 
                     description: description, 
                     is_complete: false)
     end
 
     def complete(id)
-        task = Task.where(id: id)
+        task = @task.where(id: id)
         task.update(is_complete: true)
     end
 
     def delete(id)
-        Task.where(id: id).delete
+        @task.where(id: id).delete
     end
 end

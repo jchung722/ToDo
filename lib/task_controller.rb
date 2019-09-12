@@ -9,7 +9,7 @@ class TaskController
     end
 
     def get_task(id)
-        @task[id]
+        @task.where(id: id).first
     end
 
     def create(title, description)
@@ -19,8 +19,7 @@ class TaskController
     end
 
     def complete(id)
-        task = @task.where(id: id)
-        task.update(is_complete: true)
+        @task.where(id: id).update(is_complete: true)
     end
 
     def delete(id)

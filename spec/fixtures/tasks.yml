@@ -8,8 +8,15 @@ schema:
     type: boolean
 data:
   - title: task1
-    description: description1
+    description: 
     is_complete: false
-  - title: task2
-    description: description2
+  - title:
+    description: has_description
     is_complete: false
+  - title: no_complete_status
+    description: description3
+    is_complete: 
+  - title: task1
+    description: has_description
+    is_complete: false
+

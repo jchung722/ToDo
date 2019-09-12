@@ -1,5 +1,4 @@
 require "sequel"
-require_relative "sequel_db"
 
 class Task < Sequel::Model(:tasks)
     plugin :validation_helpers

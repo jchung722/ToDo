@@ -32,6 +32,8 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.2)
+    rspec_sequel_matchers (0.5.0)
+      sequel (>= 3.8.0)
     sequel (5.24.0)
     sequel-fixture (2.0.1)
       fast
@@ -53,6 +55,7 @@ PLATFORMS
 DEPENDENCIES
   rake
   rspec
+  rspec_sequel_matchers
   sequel
   sequel-fixture
 

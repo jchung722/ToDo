@@ -1,6 +1,5 @@
 require_relative "task_controller"
 require_relative "task"
-require_relative "io"
 
 class Main
 

@@ -1,4 +1,4 @@
-class IO
+class ConsoleIO
     def self.get_task_id
         print "Which task? "
         gets.chomp.to_i

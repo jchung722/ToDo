@@ -4,7 +4,8 @@ class ConsoleIO
         gets.chomp.to_i
     end
 
-    def self.get
+    def self.get(prompt)
+        print "#{prompt}: "
         gets.chomp
     end
 
@@ -19,6 +20,7 @@ class ConsoleIO
     end
 
     def self.print_list(list)
+        puts "Your List:"
         i = 1
         list.each do |task|
             mark = "[ ]"
@@ -28,5 +30,9 @@ class ConsoleIO
             puts "#{mark}#{task.id}. #{task.title}"
             i += 1
         end
+    end
+
+    def self.print_invalid_input
+        puts "invalid input"
     end
 end

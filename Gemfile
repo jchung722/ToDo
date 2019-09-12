@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'sequel'
-gem 'sequel-fixture'
 
 group :test do
     gem 'rake'

@@ -10,12 +10,12 @@ class ConsoleIO
     end
 
     def self.print_task(task)
-        if task == nil
-            puts "This task does not exist."
-        else
+        begin
             puts "Title: #{task.title}"
             puts "Description: #{task.description}"
             puts "Complete: #{task.is_complete}"
+        rescue => e
+            puts e.message
         end
     end
 

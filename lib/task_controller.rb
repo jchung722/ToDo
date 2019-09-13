@@ -13,9 +13,13 @@ class TaskController
     end
 
     def create(title, description)
-        @task.create(title: title, 
-                    description: description, 
-                    is_complete: false)
+        begin
+            @task.create(title: title, 
+                        description: description, 
+                        is_complete: false)
+        rescue => e
+            puts e.message
+        end
     end
 
     def complete(id)

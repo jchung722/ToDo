@@ -1,13 +1,9 @@
 require "task"
 
 RSpec.describe Task do
-    describe 'complete' do
-      it 'marks the task as complete' do
-        task = Task.new("test", "description")
-
-        task.complete
-
-        expect(task.is_complete).to eq(true)
-      end
-    end
+  describe 'validations', type: :model do
+    it { is_expected.to validate_presence :title }
+    it { is_expected.to validate_presence :is_complete }
+    it { is_expected.to validate_unique :title }
+  end
 end
